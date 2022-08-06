@@ -24,7 +24,8 @@ defmodule EctoEmbeddedSchema.MixProject do
   defp deps do
     [
       {:postgrex, ">= 0.0.0"},
-      {:ecto_sql, "~> 3.1"}
+      {:ecto_sql, "~> 3.1"},
+      {:jason, "~> 1.3"}
     ]
   end
 
