@@ -52,9 +52,9 @@ create_one_album_with_multiple_tracks = fn ->
 end
 
 update_album = fn ->
-  album = EctoEmbeddedSchema.get_album_with_artist_name("Third artist")
+  album = EctoEmbeddedSchema.get_album_with_artist_name("First artist")
   EctoEmbeddedSchema.update_album(album, %{
-    title: "New third album",
+    title: "New first album",
     tracks: [
       %{
         title: "new first track"
@@ -64,7 +64,7 @@ update_album = fn ->
       }
     ],
     artist: %{
-      name: "New third artist",
+      name: "New first artist",
     }
   })
 end

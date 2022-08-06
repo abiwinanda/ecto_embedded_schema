@@ -1,21 +1,10 @@
 # EctoEmbeddedSchema
 
-**TODO: Add description**
+Sample elixir app that uses Ecto embedded schema.
 
-## Installation
+## Setup
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_embedded_schema` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:ecto_embedded_schema, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/ecto_embedded_schema>.
-
+1. The sample app uses postgres hence have it run locally by running `docker-compose up -d`.
+2. Initialize the database by running `mix ecto.setup`.
+3. Experiment with embedded schemas by performing CRUDs to album by using `iex -S mix`.
+4. There are pre-defined CRUD functions in `.iex.exs` to make the experiment easier. Feel free to use them.
