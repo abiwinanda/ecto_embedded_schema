@@ -8,6 +8,7 @@ defmodule EctoEmbeddedSchema.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      EctoEmbeddedSchema.Repo
       # Starts a worker by calling: EctoEmbeddedSchema.Worker.start_link(arg)
       # {EctoEmbeddedSchema.Worker, arg}
     ]
