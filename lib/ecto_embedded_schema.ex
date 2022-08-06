@@ -11,15 +11,6 @@ defmodule EctoEmbeddedSchema do
     Repo.one(query)
   end
 
-  def get_album_with_track_name(track) do
-    query =
-      from(a in Album,
-        where: fragment("? @> ?", a.tracks, ^Jason.encode!([%{"title" => track}]))
-      )
-
-    Repo.one(query)
-  end
-
   def create_album(attrs \\ %{}) do
     %Album{}
     |> Album.changeset(attrs)
